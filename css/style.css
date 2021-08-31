@@ -12,6 +12,13 @@ body {
     margin: 0;
 }
 
+.center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #nav-bar {
     position: fixed;
     display: flex;
@@ -61,7 +68,6 @@ body {
 
 .image-container {
     overflow: hidden;
-    /* flex-shrink: 1; */
 }
 
 .image-container img {
@@ -69,11 +75,71 @@ body {
 }
 
 .discover {
+    position: relative;
     flex-grow: 1;
-    width: 45%;
+    width: 41%;
     box-sizing: border-box;
     background-color: var(--white);
-    padding: 7.5%;
+}
+
+.discover-text {
+    margin: 17%;
+}
+
+.shop {
+    display: block;
+    margin-top: 5%;
+    padding: 2% 0%;
+    transition: color ease .15s, fill ease .15s;
+    color: var(--black);
+    fill: var(--black);
+    cursor: pointer;
+}
+
+.shop:hover {
+    color: var(--dark-gray);
+    fill: var(--dark-gray)
+}
+
+.shop > span {
+    display: inline-block;
+    margin-right: 10%;
+    font-size: 1rem;
+    letter-spacing: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.carousel-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.carousel-button {
+    width: 87px;
+    height: 87px;
+    background-color: black;
+    transition: background-color ease .1s;
+    cursor: pointer;
+}
+
+.carousel-button > svg {
+    fill: none;
+    stroke: var(--white);
+}
+
+.carousel-button:hover {
+    background-color: var(--very-dark-gray);
+}
+
+.active {
+    display: block !important;
+}
+
+.landing-carousel img {
+    display: none;
 }
 
 .about {
@@ -99,5 +165,5 @@ h2 {
 
 p {
     color: var(--dark-gray);
-    line-height: 2rem;
+    line-height: 1.75rem;
 }
